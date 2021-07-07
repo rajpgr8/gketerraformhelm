@@ -6,6 +6,9 @@ provider "helm" {
   }
 }
 
+data "google_client_config" "default" {
+}
+
 resource "helm_release" "nginx" {
   namespace = "default"
   name      = "nginx-release"
